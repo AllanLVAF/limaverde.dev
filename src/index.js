@@ -1,5 +1,5 @@
 const throng = require('throng')
-const PORT = 5005
+const PORT = null
 
 const start = () => {
   const http = require('http')
@@ -16,7 +16,7 @@ const start = () => {
 
   app.use('/', express.static('./src/build'))
 
-  const port = PORT || 5005
+  const port = PORT || 8080
 
   server.listen(port, () => {
     console.log(`We are live on ${port}`)
