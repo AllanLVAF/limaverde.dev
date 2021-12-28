@@ -1,22 +1,24 @@
+const cors = require('cors')
 const throng = require('throng')
-const PORT = null
+const express = require('express')
+const createServer = require('./createServer')
+
+const portLocal = 5005
+
+const { NODE_ENV } = process.env
+const isProduction = NODE_ENV === 'production'
 
 const start = () => {
-  const http = require('http')
-  const express = require('express')
-  const cors = require('cors')
-
   const app = express()
-  const server = http.createServer(app)
+  const server = createServer(app, isProduction)
 
-  // @ts-ignore
-  app.use(cors('*'))
+  app.use(cors())
   app.use(express.json({}))
   app.use(express.urlencoded({ extended: true }))
 
   app.use('/', express.static('./src/build'))
 
-  const port = PORT || 8080
+  const port = NODE_ENV === 'production' ? 8080 : portLocal
 
   server.listen(port, () => {
     console.log(`We are live on ${port}`)
