@@ -16,7 +16,7 @@ const start = () => {
 
   app.use('/', express.static('./src/build'))
 
-  const port = PORT || 80
+  const port = PORT || 8080
 
   server.listen(port, () => {
     console.log(`We are live on ${port}`)
