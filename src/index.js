@@ -18,7 +18,7 @@ const start = () => {
 
   app.use('/', express.static('./src/build'))
 
-  const port = NODE_ENV === 'production' ? 80 : portLocal
+  const port = NODE_ENV === 'production' ? 443 : portLocal
 
   server.listen(port, () => {
     console.log(`We are live on ${port}`)
