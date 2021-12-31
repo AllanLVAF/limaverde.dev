@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "NODE_ENV=production nodemon ./src",
-    "dev": "NODE_ENV=development nodemon ./src"
+    "prod": "NODE_ENV=production node src &",
+    "dev": "NODE_ENV=development nodemon src"
   },
   "keywords": [],
   "author": "",
