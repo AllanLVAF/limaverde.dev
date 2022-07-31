@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0354db4d.css",
+    "main.js": "/static/js/main.7e417aac.js",
+    "static/media/Allan LIMAVERDE, CV2022 En.pdf": "/static/media/Allan LIMAVERDE, CV2022 En.57ab8086f11244fac9ba.pdf",
+    "static/media/spiral.svg": "/static/media/spiral.5a9b16314bc65e67e7706874184e1a4b.svg",
+    "index.html": "/index.html",
+    "main.0354db4d.css.map": "/static/css/main.0354db4d.css.map",
+    "main.7e417aac.js.map": "/static/js/main.7e417aac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0354db4d.css",
+    "static/js/main.7e417aac.js"
+  ]
+}
