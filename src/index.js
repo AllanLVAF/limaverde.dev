@@ -4,6 +4,7 @@ const express = require('express')
 const createServer = require('./createServer')
 
 const portLocal = 5005
+const portProd = 443
 
 const { NODE_ENV } = process.env
 const isProduction = NODE_ENV === 'production'
@@ -18,23 +19,9 @@ const start = () => {
 
   app.use('/', express.static('./src/build'))
 
-  const port = NODE_ENV === 'production' ? 443 : portLocal
+  const port = isProduction ? portProd : portLocal
 
   server.listen(port, () => {
     console.log(`We are live on ${port}`)
   })
-
-  const shutdown = (signal) => {
-    const shutdownTimeout = 1000
-    console.log(`[shutdown] shutting down in ${shutdownTimeout}ms | signal: ${signal}`)
-
-    setTimeout(() => {
-      console.log(`waited ${shutdownTimeout}ms, exiting.`)
-      process.exit(0)
-    }, shutdownTimeout)
-  }
-
-  process.on('SIGTERM', shutdown).on('SIGINT', shutdown)
 }
-
-throng({ worker: start, lifetime: Infinity, count: 3 })
