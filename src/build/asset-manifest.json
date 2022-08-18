@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.0354db4d.css",
-    "main.js": "/static/js/main.7e417aac.js",
+    "main.css": "/static/css/main.05c9482b.css",
+    "main.js": "/static/js/main.7df58b77.js",
     "static/media/Allan LIMAVERDE, CV2022 En.pdf": "/static/media/Allan LIMAVERDE, CV2022 En.57ab8086f11244fac9ba.pdf",
+    "static/media/Allan_Profile_Pic.jpeg": "/static/media/Allan_Profile_Pic.d283e7cc30e8232cf203.jpeg",
     "static/media/spiral.svg": "/static/media/spiral.5a9b16314bc65e67e7706874184e1a4b.svg",
     "index.html": "/index.html",
-    "main.0354db4d.css.map": "/static/css/main.0354db4d.css.map",
-    "main.7e417aac.js.map": "/static/js/main.7e417aac.js.map"
+    "main.05c9482b.css.map": "/static/css/main.05c9482b.css.map",
+    "main.7df58b77.js.map": "/static/js/main.7df58b77.js.map"
   },
   "entrypoints": [
-    "static/css/main.0354db4d.css",
-    "static/js/main.7e417aac.js"
+    "static/css/main.05c9482b.css",
+    "static/js/main.7df58b77.js"
   ]
 }
