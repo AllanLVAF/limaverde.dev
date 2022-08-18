@@ -3,7 +3,7 @@ Built in React.js, served by a single AWS EC2 machine running Node.js... My mini
 
 For portfolio, refer to my LinkedIn or resumé - those are the right places for that, and they're both on [this very website](https://limaverde.dev)
 
-And since we're here, here's how to get this server running on a Ubuntu instance:
+And since we're here, here's what was done to serve this static website on a Ubuntu instance:
 
 1) Spin up your machine and SSH into it (e.g. `ssh -i my-key-pair.pem my-instance-user-name@my-instance-public-dns-name`)
 
@@ -21,7 +21,7 @@ sudo n 14.18.1
 3) This script below will generate an SSH key based on RSA 4,096 bits and show you your public key
 
 ```bash
-ssh-keygen -t rsa -b 4096 -C "allanlvaf@gmail.com" -f .ssh/id_rsa -q -N "" &&
+ssh-keygen -t rsa -b 4096 -C "youremail@yourprovider.com" -f .ssh/id_rsa -q -N "" &&
 cat .ssh/id_rsa.pub
 ```
 
@@ -35,6 +35,7 @@ cd limaverde.dev &&
 npm i &&
 npm src
 ```
+(The example above is with cloning this website, naturally. Change it accordingly)
 
 5) Now, to route this server to a custom domain, I used AWS Route 53 to associate the instance to an Elastic IP, then created a hosted zone and created an A record pointing to the Elastic IP. Route 53 will provide you with the names of the Name Servers that you should set your custom domain provider to point to
 
