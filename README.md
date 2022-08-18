@@ -1,9 +1,9 @@
 # limaverde.dev
-Personal website, nothing fancy
+Built in React.js, served by a single AWS EC2 machine running Node.js... My minimalistic Personal Website
 
-No portfolio or anything since most of the work I do is for private contractors and cannot be shared ¯\_(ツ)_/¯
+For portfolio, refer to my LinkedIn or resumé - those are the right places for that, and they're both on [this very website](https://limaverde.dev)
 
-But here's how I got this server running on a Ubuntu remote server:
+And since we're here, here's how to get this server running on a Ubuntu instance:
 
 1) Spin up your machine and SSH into it (e.g. `ssh -i my-key-pair.pem my-instance-user-name@my-instance-public-dns-name`)
 
